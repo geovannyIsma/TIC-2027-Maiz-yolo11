@@ -1,0 +1,42 @@
+{
+ "regla": {
+  "reduccion_fp_min": 0.9,
+  "perdida_mAP50_95_max": 0.005,
+  "semillas": [
+   13,
+   29,
+   51
+  ]
+ },
+ "yolo11n": {
+  "reduccion_fp": 0.9924,
+  "diferencia_mAP50_95": 0.0077,
+  "cumple": true,
+  "sin fondos": {
+   "mAP50_95": 0.6974,
+   "fp_impurezas": 34.2407,
+   "fp_hojas": 0.1111
+  },
+  "con fondos": {
+   "mAP50_95": 0.7051,
+   "fp_impurezas": 0.2593,
+   "fp_hojas": 0.0
+  }
+ },
+ "yolo11s": {
+  "reduccion_fp": 0.9909,
+  "diferencia_mAP50_95": -0.0006,
+  "cumple": true,
+  "sin fondos": {
+   "mAP50_95": 0.7122,
+   "fp_impurezas": 34.4074,
+   "fp_hojas": 0.0
+  },
+  "con fondos": {
+   "mAP50_95": 0.7116,
+   "fp_impurezas": 0.3148,
+   "fp_hojas": 0.1111
+  }
+ },
+ "adoptar": true
+}

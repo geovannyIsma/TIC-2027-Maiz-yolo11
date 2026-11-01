@@ -1,0 +1,44 @@
+{
+ "yolo11n": {
+  "optimizer": "SGD",
+  "lr0": 0.01,
+  "batch": 16,
+  "aumento": "A",
+  "fondos": true,
+  "imgsz": 1280,
+  "epocas": 200,
+  "paciencia": 50,
+  "semillas": [
+   42,
+   7,
+   28
+  ],
+  "conf_conteo": 0.4775,
+  "pesos": [
+   "runs/oe2/yolo11n_SGD_lr0.01_b16_augA_fondos_s42_final/weights/best.pt",
+   "runs/oe2/yolo11n_SGD_lr0.01_b16_augA_fondos_s7_final/weights/best.pt",
+   "runs/oe2/yolo11n_SGD_lr0.01_b16_augA_fondos_s28_final/weights/best.pt"
+  ]
+ },
+ "yolo11s": {
+  "optimizer": "SGD",
+  "lr0": 0.01,
+  "batch": 16,
+  "aumento": "A",
+  "fondos": true,
+  "imgsz": 1280,
+  "epocas": 200,
+  "paciencia": 50,
+  "semillas": [
+   42,
+   7,
+   28
+  ],
+  "conf_conteo": 0.2923,
+  "pesos": [
+   "runs/oe2/yolo11s_SGD_lr0.01_b16_augA_fondos_s42_final/weights/best.pt",
+   "runs/oe2/yolo11s_SGD_lr0.01_b16_augA_fondos_s7_final/weights/best.pt",
+   "runs/oe2/yolo11s_SGD_lr0.01_b16_augA_fondos_s28_final/weights/best.pt"
+  ]
+ }
+}

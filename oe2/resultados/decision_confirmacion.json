@@ -1,0 +1,56 @@
+{
+ "regla": {
+  "ganancia_min": 0.005,
+  "alfa": 0.05,
+  "pliegues": [
+   "p0",
+   "p1",
+   "p3"
+  ],
+  "semillas": [
+   13,
+   29,
+   51
+  ]
+ },
+ "yolo11n": {
+  "candidata": {
+   "optimizer": "Adam",
+   "lr0": 0.001,
+   "batch": 16,
+   "aumento": "A",
+   "fondos": true
+  },
+  "adoptada": {
+   "optimizer": "SGD",
+   "lr0": 0.01,
+   "batch": 16,
+   "aumento": "A",
+   "fondos": true
+  },
+  "diferencia": 0.0047,
+  "valor_p": 0.3164,
+  "a_favor": 7,
+  "comparaciones": 9
+ },
+ "yolo11s": {
+  "candidata": {
+   "optimizer": "SGD",
+   "lr0": 0.01,
+   "batch": 16,
+   "aumento": "C",
+   "fondos": true
+  },
+  "adoptada": {
+   "optimizer": "SGD",
+   "lr0": 0.01,
+   "batch": 16,
+   "aumento": "A",
+   "fondos": true
+  },
+  "diferencia": 0.0066,
+  "valor_p": 0.0604,
+  "a_favor": 7,
+  "comparaciones": 9
+ }
+}

@@ -1,0 +1,34 @@
+{
+ "regla": {
+  "ganancia_min": 0.005,
+  "semillas": [
+   13,
+   29,
+   51
+  ]
+ },
+ "yolo11n": {
+  "ganadora": {
+   "optimizer": "Adam",
+   "lr0": 0.001,
+   "batch": 16,
+   "aumento": "A",
+   "fondos": true
+  },
+  "necesita_confirmacion": true,
+  "mAP50_95": 0.7103,
+  "mAP50_95_referencia": 0.7051
+ },
+ "yolo11s": {
+  "ganadora": {
+   "optimizer": "SGD",
+   "lr0": 0.01,
+   "batch": 16,
+   "aumento": "C",
+   "fondos": true
+  },
+  "necesita_confirmacion": true,
+  "mAP50_95": 0.7166,
+  "mAP50_95_referencia": 0.7116
+ }
+}

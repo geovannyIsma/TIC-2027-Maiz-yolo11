@@ -1,0 +1,32 @@
+{
+ "resolucion": {
+  "elegido": 1280,
+  "960 - 640": {
+   "diferencia": 0.0181,
+   "valor_p": 0.0
+  },
+  "1280 - 960": {
+   "diferencia": 0.008,
+   "valor_p": 0.0081
+  }
+ },
+ "fotometrico": {
+  "elegido": "norm",
+  "norm - base": {
+   "diferencia": 0.008,
+   "valor_p": 0.0013
+  }
+ },
+ "balanceo": {
+  "elegido": "sinbal",
+  "bal - sinbal": {
+   "diferencia": 0.0001,
+   "valor_p": 0.9762
+  }
+ },
+ "criterio": "efectos principales",
+ "regla": {
+  "ganancia_min": 0.005,
+  "alfa": 0.05
+ }
+}
