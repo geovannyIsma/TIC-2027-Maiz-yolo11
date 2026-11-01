@@ -28,7 +28,6 @@ maiz-yolo11-v2/
 ├── fotos/               fotos propias (sin metadatos): hojas vacías para los fondos negativos y fotos de prueba con su referencia
 ├── explicabilidad/      pruebas de Grad-CAM con los modelos finales (exploratorio, sin informe)
 ├── antecedentes/        PIIC y figuras de la asignatura Proyectos Tecnológicos (julio de 2026)
-├── zenodo.py            genera los paquetes para Zenodo en zenodo/
 ├── datos/               (local) datasets originales y derivados
 ├── runs/                (local) corridas de Ultralytics
 ├── modelos/             (local) pesos preentrenados en COCO (yolo11n.pt, yolo11s.pt)
@@ -90,15 +89,3 @@ Los notebooks generan el resto de `datos/`:
 4. **Al terminar**, la sesión descarga un zip con sus corridas y su registro. En el OE2, los zips de las fases anteriores se suben, sin cambiarles el nombre, a la raíz de Drive para que la fase siguiente lea sus decisiones. En local, los notebooks de análisis incorporan las corridas a `runs/` y sus filas al registro.
 
 **Imágenes nuevas:** el dataset final está normalizado fotométricamente, así que toda imagen que no venga de él se prepara con `comun.preprocesar(img, 1280, 'norm')` antes de la inferencia.
-
-## Paquetes para Zenodo
-
-`zenodo.py` genera en `zenodo/` los cuatro paquetes que se publican, y comprueba cada uno (número de archivos y CRC):
-
-| Paquete | Contenido |
-| :--- | :--- |
-| `Data_corr_v6.zip` | Dataset original con las etiquetas corregidas (669 imágenes, 10 clases, partición original de Roboflow) |
-| `Data_final.zip` | Dataset final del OE1: 1280 px, normalizado, 2 clases y subtipos (`labels_subtipo`), partición por lote: train 344, valid 115, test 54 |
-| `fondos.zip` | Fondos negativos (impurezas y hojas vacías) preprocesados como el dataset, con las cajas de las impurezas y su reparto por partición (`fondos.json`) |
-| `modelos.zip` | Modelos finales de la 2.2 (YOLOv11n y YOLOv11s, semillas 42, 7 y 28): `best.pt`, `args.yaml` y `results.csv` de cada corrida, y `configuracion_final.json` |
-
