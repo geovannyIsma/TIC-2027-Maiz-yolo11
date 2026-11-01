@@ -8,6 +8,8 @@ Los modelos detectan cada grano y lo clasifican en dos clases:
 
 El conteo se obtiene de las detecciones.
 
+**Datos y modelos publicados en Zenodo:** [https://doi.org/10.5281/zenodo.23851669](https://doi.org/10.5281/zenodo.23851669)
+
 ## Estructura
 
 ```
@@ -59,6 +61,19 @@ Los notebooks generan el resto de `datos/`:
 - `etiquetas_v0`: la configuración elegida con las etiquetas originales (experimento complementario de limpieza);
 - `Data_final`: dataset final (1280 px, normalización fotométrica, sin balanceo), partición por lote en `train/valid/test`;
 - `fondos`: fondos negativos (impurezas y hojas vacías) con el mismo preprocesamiento, repartidos por lote de captura.
+
+### Datos y modelos publicados
+
+Los datasets derivados y los modelos finales están en Zenodo: [https://doi.org/10.5281/zenodo.23851669](https://doi.org/10.5281/zenodo.23851669) (CC BY 4.0). Para usarlos con este código sin regenerarlos:
+
+| Paquete | Contenido | Dónde se descomprime |
+| :--- | :--- | :--- |
+| `Data_corr_v6.zip` | Dataset original con las etiquetas corregidas (669 imágenes, 10 clases) | `datos/` |
+| `Data_final.zip` | Dataset final: 1280 px, normalizado, 2 clases y subtipos; train 344, valid 115, test 54 | `datos/` |
+| `fondos.zip` | Fondos negativos preprocesados, con las cajas de las impurezas y su reparto (`fondos.json`) | `datos/` |
+| `modelos.zip` | Modelos finales de YOLOv11n y YOLOv11s (semillas 42, 7 y 28) y `configuracion_final.json` | raíz del repositorio (crea `runs/oe2/` y `oe2/resultados/`) |
+
+Toda imagen nueva debe pasar por `comun.preprocesar(img, 1280, 'norm')` antes de usarla con los modelos.
 
 ## Orden de ejecución
 
