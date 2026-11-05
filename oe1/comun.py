@@ -219,16 +219,6 @@ def detectar(inv):
         for r, ni in zip(rs, n):
             if (ni - med) / mad < -2 and ni < 0.6 * med:
                 anotar('Posible etiquetado incompleto', r, -1, f'{int(ni)} cajas; mediana de su sesión {med:.0f}')
-        comp = Counter(c for r in rs for c in r['clases'] if c in CLASES_MAIZ)
-        total = sum(comp.values())
-        if total:
-            dom, ndom = comp.most_common(1)[0]
-            if ndom / total >= 0.85:
-                for r in rs:
-                    for i, c in enumerate(r['clases']):
-                        if c in CLASES_MAIZ and c != dom and comp[c] / total < 0.03:
-                            anotar('Clase rara en sesión casi monoclase', r, i,
-                                   f'{CLASES[c]} ({comp[c]} de {total} cajas) en una sesión de {CLASES[dom]}')
     return pd.DataFrame(problemas, columns=['tipo', 'stem', 'base', 'split', 'caja', 'pareja', 'detalle'])
 
 
